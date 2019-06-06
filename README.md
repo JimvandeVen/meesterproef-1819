@@ -28,17 +28,11 @@ Op vrijdag ga je naar de opdrachtgever om je vorderingen te bespreken.
 
 ## Criteria en beoordeling
 
-Met de Meesterproef laat je zien wat je hebt geleerd tijdens de minor. 
-Studenten die de vakken hebben gehaald kunnen aan de Meesterproef beginnen.
+[WAFS Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZGWGPC_RMvTMry8YW5XOM79GEIdgS7I5JlOe6OeeOUdmv7ok1s9jQhzojNE4AsyzgL-jJCbRj1LN/pubhtml?gid=0&single=true)
 
-De Meesterproef bestaat uit 3 projectweken en een eindproject van 5 weken. 
-De 3 projectweken, 
-[PW1](https://github.com/cmda-minor-web/project-1-1819), 
-[PW2](https://github.com/cmda-minor-web/project-2-1819) en 
-[PW3](https://github.com/cmda-minor-web/project-3-1819) tellen mee als AVV.
+[Performance Matters Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vTO-pc2UMvpT0pUjt6NJeckc5N9E7QvCxEfVJW1JjuM0m_9MM8ra05J0s6br486Rocz5JVMhAX_C37_/pubhtml?gid=0&single=true)
 
-Het eindproject wordt beoordeeld op een Design rationale, een Product biografie en een reflectie op het eigen niveau. 
-Én of de klant blij is met het gemaakte project.
+[REal Time Web Rubric](https://docs.google.com/spreadsheets/d/e/2PACX-1vSd1I4ma8R5mtVMyrbp6PA2qEInWiOialK9Fr2orD3afUBqOyvTg_JaQZ6-P4YGURI-eA7PoHT8TRge/pubhtml)
 
 ### Design rationale
 In de Design rationale schrijf je de debriefing, de probleem-definitie, toon je de oplossing en schrijf je een uitleg van de code. 
