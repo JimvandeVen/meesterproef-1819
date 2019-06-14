@@ -36,6 +36,12 @@ Op vrijdag ga je naar de opdrachtgever om je vorderingen te bespreken.
 
 [Mijn rubric](https://docs.google.com/spreadsheets/d/1GgvnGCYsqH6agW-4KcxYMsjE5_POe2UOi12ONM4nYsM/edit?usp=sharing)
 
+opdracht
+onze oplossing
+features
+leerdoelen per feature
+rubric per feature
+uitleg per rubric
 ### Design rationale
 In de Design rationale schrijf je de debriefing, de probleem-definitie, toon je de oplossing en schrijf je een uitleg van de code. 
 De Design rationale is een verantwoording van je ontwerp.
