@@ -16,19 +16,6 @@
 
 In dit document, de productbiografie, ga ik per week door het project heen. Ik zal elke week een korte beschrijving geven van wat we hebben gedaan. Met daarbij de verschillende schetsen, itteraties en uitwerkingen. Aan deze onderdelen zijn features verbonden die ik naast een aantal leerdoelen zal leggen. Per feature/leerdoel zal ik kijken welke rubric erbij past en dit onderbouwen.
 
-- opdracht
-- onze oplossing
-- features
-- leerdoelen per feature
-- rubric per feature
-- uitleg per rubric
-
-
-Bij de briefing van het project op de maandag kwamen wij er achter dat de klant een ander beeld had van onze werkzaamheden dan wij zelf hadden. De klant had het beeld dat wij aan hun backlog zouden gaan werken en functies toevoegen in hun platform.
-Ons beeld van het project was het dat wij bezig gingen met het ontwerp en de UX van het platform waar het team van ICT een start aan had gemaakt.
-
-In deze week zijn wij toen bezig geweest met onderzoek naar het huidige en vorige platform dat bij cern gebruikt werd en hebben een plan gemaakt met de werkzaamheden waar wij ons mee bezig gingen houden om het platfrom plesurable te maken voor de gebruikers.
-
 ## Week I
 *27-5*
 
@@ -46,6 +33,12 @@ Marcel en ik zijn ook bezig geweest met het uitzoeken van de tech stack die de I
 Met het onderzoek merkte wij dat het voor ons een moeilijke stack zou zijn om op verder te werken door de keuze van talen en frameworks.
 Door deze conclusie hebben wij besloten een eigen proof of concept demo te maken met onze eigen stack en zijn gaan uitzoeken wat hiervoor het beste was.
 
+- opdracht
+- onze oplossing
+- features
+- leerdoelen per feature
+- rubric per feature
+- uitleg per rubric
 
 ## Week II
 *03-06*
