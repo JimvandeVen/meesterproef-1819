@@ -9,6 +9,7 @@
 
 ## Inhoud
 - [Inleiding](#inleiding)
+- [Leerdoelen](#leerdoelen)
 - [Week I](#week-i)
   - [Concepting](#concepting)
   - [Developer Stack](#developer-stack)
@@ -38,11 +39,11 @@
 In dit document, de productbiografie, ga ik per week door het project heen. Ik zal elke week een korte beschrijving geven van wat we hebben gedaan. Met daarbij de verschillende schetsen, itteraties en uitwerkingen. Aan deze onderdelen zijn features verbonden die ik naast een aantal leerdoelen zal leggen. Per feature/leerdoel zal ik kijken welke rubric erbij past en dit onderbouwen.
 
 
-## Learning Goals 🎓
+## Leerdoelen
 
-These are my learing goals for the meesterproef:
 
-| Coures                   | Goal                                                | Description                                                                                                                             |
+
+| Vakken                   | Doel                                               | Beschrijving                                                                                                                             |
 | ------------------------ | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | **Web App From Scratch** | _Data Structuur._                   | In dit project wilde ik veel aandacht besteden aan het vooraf structureren van de data.          |
 |                          | _GraphQL Implementeren._            | Omdat GraphQL een erg krachtige manier is om met je database om te gaan wilde ik dit graag implementeren |
