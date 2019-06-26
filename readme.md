@@ -2,6 +2,11 @@
 
 ![]()
 
+## Belangrijke Links
+1. [Repo van de applicatie](https://github.com/roobinh/meesterproef-laadpaal) (Meldpaal)
+2. [Design Rationale](https://laadpaal.gitbook.io/de-meldpaal-design-rationale/) (voor alle informatie over de applicatie)
+3. [De Applicatie](https://laadpalen.herokuapp.com/) (Live DEMO)
+
 ## Inhoud
 - [Inleding](#inleiding)
 - [Week I](#week-i)
@@ -15,6 +20,9 @@
   - [Datamodel](#datamodel)
   - [Mapbox](#mapbox)
 - [Week IV](#week-iv)
+  - [Clusters](#clusters)
+  - [Chat](#chat)
+  - [UX](#ux)
 - [Week V](#week-v)
 - [Leerdoelen](#leerdoelen)
 - [Mijn rubric](#mijn-rubric)
@@ -80,6 +88,9 @@ In week twee hebben we in het eerste feedbackgesprek ons prototype laten zien aa
 ### Datamodel
 Om de database op te zetten hadden we een datamodel nodig. Het is belangrijk om hier goed over na te denken voordat je de rest van de applicatie gaat maken. Anders krijg je later veel dubbel werk. Ons datamodel, tot nu toe, zag er zo uit:
 
+<details>
+<summary>Data model</summary>
+
 ```USERS
   ID: unique ID
   email
@@ -102,6 +113,8 @@ COMPLAINTS
   status
   date
 ```
+</details>
+
 
 ### Tweede Prototype
 Het tweede prototype dat we gemaakt hebben was nog zonder een werkende kaart zoals we wel wilde. Maar was vooral om even te kijken bij de opdrachtgever hoe hij het invullen van een melding vond gaan. Dit hebben we in week 3 getest. Hieronder een paar van de belangrijkste schermen die we hebben getset.
@@ -132,10 +145,140 @@ Deze week hebben we ons ook gefocussed op MapBox en omdat we nu ook de data van 
 ## Week IV
 **17-21 juni**
 
+Deze week was onze opdrachtgever op vakantie en konden we dus geen feedbackgesprek inplannen. Dat heeft ons er natuurlijk niet van weerhouden om lekker door te werken.
+
+### Clusters
+
+Het eerste probleem dat we moesten tackelen was ervoor zorgen dat de kaart beter zou gaan performen. Dit hebben we gedaan door [clusters](https://docs.mapbox.com/android/maps/overview/clustering/) toe te voegen aan mapbox. Wat dit betekent is dat de pointers op een hoger zoom level geclusterd getoond worden. Hierdoor is de performance beter. De pointers zijn in zekere zin nog steeds gecreerd. 
+Hieronder de code 'before' en 'after'. 
+
+<details>
+<summary>Before</summary>
+<p>
+``` js       
+        var pointer = {
+          type: "FeatureCollection",
+          features: [
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [pole.longitude, pole.latitude]
+              },
+              properties: {
+                title: pole.address
+              }
+            }
+          ]
+        };
+```
+</p>
+</details>
+<details>
+<summary>After</summary>
+
+``` js       
+        let pointer = {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [pole.longitude, pole.latitude]
+            },
+            properties: {
+              address: pole.address,
+              id: pole._id,
+              lngLat: pole.longitude + " " + pole.latitude,
+              color: color,
+              showComplaints: showComplaints
+            }
+          };
+          pointers.push(pointer);
+        }
+      });
+
+      map.addSource("earthquakes", {
+        type: "geojson",
+        data: {
+          type: "FeatureCollection",
+          crs: {
+            type: "name",
+            properties: { name: "urn:ogc:def:crs:OGC:1.3:CRS84" }
+          },
+          features: pointers
+        },
+        cluster: true,
+        clusterMaxZoom: 14,
+        clusterRadius: 50
+      });
+
+      map.addLayer({
+        id: "clusters",
+        type: "circle",
+        source: "earthquakes",
+        filter: ["has", "point_count"],
+        paint: {
+          "circle-color": [
+            "step",
+            ["get", "point_count"],
+            "#51bbd6",
+            100,
+            "#f1f075",
+            750,
+            "#f28cb1"
+          ],
+          "circle-radius": [
+            "step",
+            ["get", "point_count"],
+            20,
+            100,
+            30,
+            750,
+            40
+          ]
+        }
+      });
+```
+</details>
+
+### Chat
+
+Een van de wensen van de opdrachtgever was ook het contact tussen de gebruiker en een 'dashboard'. Dit hebben wij toegevoegd aan de hand van [sockets](https://socket.io/). Dit was best nog wel ven doorbijten want om de een of andere reden ging het vrij lastig. We hebben hier zeker twee dagen aan gezeten. Het werk redelijk. Alle berichten worden goed opgeslagen in de database maar sockets weigert soms te werken. Hierdoor kan het realtime gedeelte van de chat soms uitvallen helaas.
+
+### UX
+We hebben ook veel tijd besteed aan het verbeteren van de UX. Dit is iets waar zowel Robin als ik van nature niet heel goed in zijn. Maar toch denk ik dat het aardigf is gelukt. Denk aan de affordance van knoppen, hoe die zich gedragen. Hieronder een lijst met dingen die we deze week aan de UX hebben verbeterd: 
+- Alternatieve laadpaal pagina aanpassen
+- Als er geen afbeelding is, niks laten zien
+- Locatie bij melding (address)
+- Legenda bij map
+- Uitleg wat je kan doen op de map
+- Laadpalen groter
+- Meldingen bekijken als er geen meldingen zijn uitschakelen
+- Cursor pointer
+- terug knop
+- Selecteer waar het probleem ligt boven 'de laadpaal..'
+- Disable zoom
+- en nog veel meer....
+
 
 ## Week V
-**24-06**
+**24-27 juni-**
+
+In de laatste week hebben we vooral de puntjes op de i gezet en veel gedocumenteerd. De laatste aanpassingen in de app die we hebben gedeaan zijn: 
+- Chat form maken zodat enter werkt
+- Name fixen in chat
+- CSS voor de chat, beetje pimpen
+- Onboarding
+- Admin moet kunenn typen *niet gelukt* 
+- Sockets werken op heroku *niet gelukt*
+
 ## Leerdoelen
+### MapBox
+Voor dit project had ik nog nooit met MapBox gewerkt dus dit leek mij een heele goede uitdaging. 
+### GraphQL
+
+### Sockets
+
+### UX
 ## Mijn Rubric
 
 
