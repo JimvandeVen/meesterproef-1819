@@ -11,9 +11,9 @@
 - [Week II](#week-ii)
   - [Tweede Prototype](#tweede-prototype)
   - [Concepting](#concepting)
-- [Week III](#Week-iii)
-- [Week IV](#Week-iv)
-- [Week V](#Week-v)
+- [Week III](#week-iii)
+- [Week IV](#week-iv)
+- [Week V](#week-v)
 - [Leerdoelen](#leerdoelen)
 - [Mijn rubric](#mijn-rubric)
 
@@ -27,25 +27,62 @@ In dit document, de productbiografie, ga ik per week door het project heen. Ik z
 In de eerste week hebben we een briefing gehad van onze opdrachtgever J. R. Helmus. Hierin werd ons uitgelegd wat voor applicatie er nodig was en welke stakeholders er bij dit project betrokken waren. Aan het einde van de briefing ben ik met Robin Hofman samen gaan werken.
 
 ### Concepting
+Voordat we konden beginnen met schetsen moesten we duidelijk hebben welke soorten meldingen er gedaan zouden kunnen worden. Hier hebben we een lijst van gemaakt:
+
+- De laadpaal...
+  - ...is uit/defect
+  - ...is te lang bezet
+  - ...is niet te bereiken
+  - ...kabel is kapot
+  - ...is bezet door een niet elektrische auto
+- De parkeerplek...
+  - ...is te lang bezet
+  - ...is niet te bereiken
+  - ...is bezet door een niet elektrische auto
+- Mijn pasje...
+  - ...werkt niet
+  - ...is kapot
+  - ...heb ik niet bij me
+
 Robin en ik waren het al vrij snel eens over hoe de applicatie zou moeten gaan werken. Hier hebben we een aantal simpele wireframes over gemaakt. Te zien hieronder.
 
-![]()
+![wireframes](afbeeldingen-biografie/wireframes.jpeg)
 
 ### Developer Stack
-Nadat we een paar schetsen hebben gemaakt zijn we bezig gegaan met het bedenken welke developerstack 
+Nadat we een paar schetsen hebben gemaakt zijn we bezig gegaan met het bedenken welke developerstack we in gebruik zouden nemen.  
+Server: [NodeJS](https://nodejs.org/en/)  
+Rendering: [EJS](https://ejs.co/)  
+Database: [GraphQL](https://graphql.org/)/[MongoDB](https://www.mongodb.com/)
 
 ### Eerste Prototype
+Het eerste prototype dat we gemaakt hebben is in [Adobe XD](https://www.adobe.com/products/xd.html) gemaakt. Hiervan hebben we een klikbaar prototype gepresenteerd aan de opdrachtgever in week twee. Hieronder een aantal schermen en wat ze doen.
 
-- opdracht
-- onze oplossing
-- features
-- leerdoelen per feature
-- rubric per feature
-- uitleg per rubric
+Op de 'map' pagina kan de gebruiker een paal selecteren om een melding over te doen. Dit hebben we later geimplementeerd met mapbox.
+
+![wireframes](afbeeldingen-biografie/ChoosePole.png)
+
+Wanner de gebruiker een paal heeft geselecteerd krijgt hij/zij een smooth werkend keuzemenu te zien waarbij gekozen kan worden uit de verschillende dingen die mis kunnen zijn.
+
+![wireframes](afbeeldingen-biografie/ChooseTypeofComplaint.png)
+
+Wanneer een melding is gelukt krijgt de gebruiker een nieuwe, wel beschikbare, laadpaal te zien waar hij/zij naartoe geleid kan worden.
+
+![wireframes](afbeeldingen-biografie/AlternativeRoute.png)
+
 
 ## Week II
 **3-8 juni**
-ste functionaliteiten rond en kwam de focus op het samenvoegen van de verschillende delen van de applicatie.
+
+In week twee hebben we ons eerste 
+
+### Tweede Prototype
+Het eerste prototype dat we gemaakt hebben is in [Adobe XD](https://www.adobe.com/products/xd.html) gemaakt. Hiervan hebben we een klikbaar prototype gepresenteerd aan de opdrachtgever in week twee. Hieronder een aantal schermen en wat ze doen.
+
+![wireframes](afbeeldingen-biografie/ChoosePole.png)
+![wireframes](afbeeldingen-biografie/ChooseComplaint.png)
+![wireframes](afbeeldingen-biografie/ChooseTypeofComplaint.png)
+![wireframes](afbeeldingen-biografie/Succes.png)
+
 
 ## Week III
 **10-14 juni**
@@ -53,6 +90,17 @@ ste functionaliteiten rond en kwam de focus op het samenvoegen van de verschille
 **17-21 juni**
 ## Week V
 **24-06**
+## Leerdoelen
+## Mijn Rubric
+
+
+
+- opdracht
+- onze oplossing
+- features
+- leerdoelen per feature
+- rubric per feature
+- uitleg per rubric
 # Meesterproef 2019 @cmda-minor-web · 2018-2019
 
 In de Meesterproef ga je toepassen wat je in de Minor Webdev hebt geleerd. 
