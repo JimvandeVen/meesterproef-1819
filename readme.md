@@ -24,7 +24,7 @@
   - [Chat](#chat)
   - [UX](#ux)
 - [Week V](#week-v)
-- [Leerdoelen](#leerdoelen)  
+- [Reflectie](#reflectie)  
   - [Web App From Scratch](#web-app-from-scratch)  
   - [Web design](#web-app-from-scratch)  
   - [Performance Matters](#web-app-from-scratch)  
@@ -36,6 +36,27 @@
 ## Inleiding
 
 In dit document, de productbiografie, ga ik per week door het project heen. Ik zal elke week een korte beschrijving geven van wat we hebben gedaan. Met daarbij de verschillende schetsen, itteraties en uitwerkingen. Aan deze onderdelen zijn features verbonden die ik naast een aantal leerdoelen zal leggen. Per feature/leerdoel zal ik kijken welke rubric erbij past en dit onderbouwen.
+
+
+## Learning Goals 🎓
+
+These are my learing goals for the meesterproef:
+
+| Coures                   | Goal                                                | Description                                                                                                                             |
+| ------------------------ | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Web App From Scratch** | _Data Structuur._                   | In dit project wilde ik veel aandacht besteden aan het vooraf structureren van de data.          |
+|                          | _GraphQL Implementeren._            | Omdat GraphQL een erg krachtige manier is om met je database om te gaan wilde ik dit graag implementeren |
+| **Real-Time Web**    | _Sockets in een chat functionaliteit implementeren._ | Ook al heb ik eerder met sockets gewerk bij real-time web heb ik dit toch als leerdoel. Ik heb nog niet eerder een chat functionaliteit geimplementeerd. Zeker niet eentje die naast real-time ook de berichten opslaat in de database.          |
+
+
+Een niet klein onderdeel van deze meesterproef voor mij, maar niet in de andere vakken specifiek behandeld
+
+| Technology | Goal                 | Description                                                                                  |
+| ---------- | -------------------- | -------------------------------------------------------------------------------------------- |
+| **UX** | _Beter worden in UX._ | Dit is een van mijn zwakste kanten als frontender. Hier wil/moet ik beter in worden. Vooral de micro interacties die plaatsvinden wanneer er user input is wil ik beter in worden  |
+
+[Hier](#reflection-) mijn reflectie op de leerdoelen.
+
 
 ## Week I
 **27-31 juli**
@@ -277,7 +298,7 @@ In de laatste week hebben we vooral de puntjes op de i gezet en veel gedocumente
 - Admin moet kunenn typen *niet gelukt* 
 - Sockets werken op heroku *niet gelukt*
 
-## Leerdoelen
+## Reflectie
 
 ### Web App From Scratch
 Web app From scratch ging over het creeren van structuur, fetching data en sorteren/filteren van data. In dit project zijn we heel gestructureerd bezig gegaan met het opzetten van de database in GraphQL/MongoDB. Hierdoor was het ophalen van de data en het sorteren/filteren ervan gedurende het hele project erg gemakkelijk om mee te werken. Door dit van te voren goed uit te zoeken hebben we een hele hoop extra werk en hoofdpijn weten te voorkomen. Ik denk dat ik bij het volgende project waaraan ik zal werken ik met dezelfde structuur qua database zal gaan werken.
