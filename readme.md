@@ -57,6 +57,7 @@ Een niet klein onderdeel van deze meesterproef voor mij, maar niet in de andere 
 | **UX** | _Beter worden in UX._ | Dit is een van mijn zwakste kanten als frontender. Hier wil/moet ik beter in worden. Vooral de micro interacties die plaatsvinden wanneer er user input is wil ik beter in worden  |
 
 [Hier](#reflection-) mijn reflectie op de leerdoelen.
+[Hier](https://docs.google.com/spreadsheets/d/1GgvnGCYsqH6agW-4KcxYMsjE5_POe2UOi12ONM4nYsM/edit?usp=sharing) mijn rubric op de leerdoelen.
 
 
 ## Week I
