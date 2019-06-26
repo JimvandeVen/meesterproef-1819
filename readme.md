@@ -24,7 +24,14 @@
   - [Chat](#chat)
   - [UX](#ux)
 - [Week V](#week-v)
-- [Leerdoelen](#leerdoelen)
+- [Leerdoelen](#leerdoelen)  
+  - [Web App From Scratch](#web-app-from-scratch)  
+  - [Web design](#web-app-from-scratch)  
+  - [Performance Matters](#web-app-from-scratch)  
+  - [Real-Time Web](#real-time-web)  
+  - [MapBox](#mapbox)  
+  - [Sockets](#sockets)  
+  - [UX](#ux)  
 - [Mijn rubric](#mijn-rubric)
 
 ## Inleiding
@@ -272,14 +279,55 @@ In de laatste week hebben we vooral de puntjes op de i gezet en veel gedocumente
 - Sockets werken op heroku *niet gelukt*
 
 ## Leerdoelen
+
+### Web App From Scratch
+Web app From scratch ging over het creeren van structuur, fetching data en sorteren/filteren van data. In dit project zijn we heel gestructureerd bezig gegaan met het opzetten van de database in GraphQL/MongoDB. Hierdoor was het ophalen van de data en het sorteren/filteren ervan gedurende het hele project erg gemakkelijk om mee te werken. Door dit van te voren goed uit te zoeken hebben we een hele hoop extra werk en hoofdpijn weten te voorkomen. Ik denk dat ik bij het volgende project waaraan ik zal werken ik met dezelfde structuur qua database zal gaan werken.
+
+### Web design
+Voor webdesign heb ik een accessibility test gedaan op de verschillende pagina's die kwam erg goed naar boven. De semantiek was overal uitstekend evenals de tab order van de applicatie. Ook de buttons geven afdoende feedback op gebruikersinput.
+
+![accessibility](afbeeldingen-biografie/accesability1.PNG)
+
+### Performance Matters
+Voor performance matters hebben wij GraphQL gebruikt. GraphQL is in het gebruik veel gemakkelijker omdat je geneste data terug kan vragen. Dit zorgt ervoor dat je op de server of in de client niet nog hoeft te mappen op de binnengekomen data. 
+
+### Real-Time Web
+In the application I provided a real time connection between the server and the client. Our app was pretty straight forward and lacked some flair, so with the implementation of sockets on the client and server, we could send events around and take actions based on the events.
+
+I found it very nice to work with, also the implementation went quite smooth which is 50% of the developer experience. It was nice to see that we could now emit events when you update a status or create an issue in the app. Stakeholders in the dashboard would be notified when a new issue appeared and when the issue status changed, the user would be notified.
+
+This kind of interaction really gives a lot more meaning to your application and I am very happy that we could implement it inside our app.
 ### MapBox
-Voor dit project had ik nog nooit met MapBox gewerkt dus dit leek mij een heele goede uitdaging. 
-### GraphQL
+Vóór dit project had ik nog nooit met MapBox gewerkt dus dit leek mij een hele goede uitdaging. Robin had hier wel al mee gewerkt, dit zorgde ervoor dat ik een hoop van de valkuilen al uitgelegd kon krijgen. Erg handig.
+
+Wat je vooral leuk is aan MapBox, is dat je erg leuke 'fly to' functies heb die de kaart smooth en gebruiksvriendelijk kunnen maken.
+
+<details>
+<summary>Fly To</summary>
+
+``` js       
+function flyToNearestPole() {
+  if (dichstbijzijnde[1] == 0 && dichstbijzijnde[2] == 0) {
+      console.log("paal nog niet berekend.");
+    } else {
+      map.flyTo({
+        center: [dichstbijzijnde[2], dichstbijzijnde[1]],
+        zoom: 16
+      });
+    }
+  }
+```
+</details>
+
+Ook het toevoegen van cluster, dat overigens nog best lastig was, was een leerzaam onderdeel.
+
 
 ### Sockets
 
 ### UX
 ## Mijn Rubric
+
+
 
 
 
@@ -327,30 +375,8 @@ Op vrijdag ga je naar de opdrachtgever om je vorderingen te bespreken.
 
 [Mijn rubric](https://docs.google.com/spreadsheets/d/1GgvnGCYsqH6agW-4KcxYMsjE5_POe2UOi12ONM4nYsM/edit?usp=sharing)
 
-
-### Design rationale
-In de Design rationale schrijf je de debriefing, de probleem-definitie, toon je de oplossing en schrijf je een uitleg van de code. 
-De Design rationale is een verantwoording van je ontwerp.
-
-### Product biografie
-In het eindproject doorloop je een iteratief proces. 
-Elke week bespreek je met je opdrachtgever je vorderingen en ideeen. 
-In de Product biografie hou je stap voor stap bij wat je allemaal hebt gedaan. 
-Je schrijft over het proces, de werkwijze en de planning. 
-Ook schetsen, testen, uitprobeersels en inspiratie zijn deel van de Product biografie.
-
 ### Reflectie op eigen niveau
 Aan de hand van de vakrubrics reflecteer je systematisch op je werk. 
 In een aantal gesprekken met een coach _reviewen_ we de code van je project. 
 Dit doen we op basis van de rubrics van de verschillende vakken. 
 Zo krijg je een goed beeld van je eigen niveau, mogelijke aandachtspunten en/of aspecten van het design-proces waar je je nog op kan verbeteren.
-
-### Een blije klant
-Voor de klant maak je een (werkend) prototype. Gericht op een bepaalde gebruikersgroep, geschikt voor verschillende apparaten, met echte data, én een goede UX. 
-Jeweettoch. 
-Een blije klant is een goede klant. 
-Soms ontkom je er niet aan dat je een beetje eigenwijs moet doen. 
-Dan doe je juist niet wat de klant wil en probeer je de opdrachtgever te overtuigen met een proof-of-concept. 
-En soms kan het voorkomen dat het proces niet helemaal soepel loopt. 
-Dat hoort erbij en daar leer je van.
-Aan het eind van het project vragen we de klant feedback op het geleverde werk... 
