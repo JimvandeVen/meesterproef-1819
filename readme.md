@@ -1,6 +1,6 @@
 # Product Biografie
 
-![]()
+![app](afbeeldingen-biografie/app.PNG)
 
 ## Belangrijke Links
 1. [Repo van de applicatie](https://github.com/roobinh/meesterproef-laadpaal) (Meldpaal)
