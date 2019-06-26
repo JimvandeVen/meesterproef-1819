@@ -13,6 +13,7 @@
   - [Tweede Prototype](#tweede-prototype)
 - [Week III](#week-iii)
   - [Datamodel](#datamodel)
+  - [Mapbox](#mapbox)
 - [Week IV](#week-iv)
 - [Week V](#week-v)
 - [Leerdoelen](#leerdoelen)
@@ -118,22 +119,20 @@ Het tweede feedbackgesprek met de opdrachtgever vond in week 3 plaats. Hierbij h
 
 ### Datamodel
 
-Omdat er een hele hoop nieuwe data in de database moest hebben we ook nog even goed gekeken naar het datamodel. 
+Omdat er een hele hoop nieuwe data in de database moest hebben we ook nog even goed gekeken naar het datamodel. We hebben goed nagedacht over wat we allemaal willen kunnen laten zien in de applicatie over een paal/melding/chat. Zo hebben we bij veel onderdelen een timestamp toegevoegd. Ook was het va belang om te kunnen zien hoeveel stopcontacten er vrij zouden zijn bij een laadpaal.
 
-![Datamodel](afbeeldingen-biografie/datamodel.jpeg)
+![Datamodel](afbeeldingen-biografie/datamodel.jpg)
 
 ### Mapbox
 
-Voor 12/06/2019:
-- MapBox implementeren
-- Palen op MapBox weergeven
-- On click -> navigeren of klacht
-- Footer/fixed buttons onderaan pagina
-- Successpagina fixen
-- PowerPoint maken
+Deze week hebben we ons ook gefocussed op MapBox en omdat we nu ook de data van ongeveer 1500 palen hadden konden we die ook plotten op de kaart. We hadden hier nog wel wat problemen mee aangezien de kaart nogal stotterend werkte omdat er teveel points(1500!) gerenderd waren. Ook gebruikten we voor de points een image, waardoor er veel werd gevraagd van de browser.
+
+![kaart](afbeeldingen-biografie/kaart.PNG)
 
 ## Week IV
 **17-21 juni**
+
+
 ## Week V
 **24-06**
 ## Leerdoelen
