@@ -1,11 +1,16 @@
 # Product Biografie
 
-![dashboard](./img/dashboard.png)
+![]()
 
 ## Inhoud
 - [Inleding](#inleiding)
 - [Week I](#week-i)
+  - [Concepting](#concepting)
+  - [Developer Stack](#developer-stack)
+  - [Eerste Prototype](#eerste-prototype)
 - [Week II](#week-ii)
+  - [Tweede Prototype](#tweede-prototype)
+  - [Concepting](#concepting)
 - [Week III](#Week-iii)
 - [Week IV](#Week-iv)
 - [Week V](#Week-v)
@@ -17,10 +22,19 @@
 In dit document, de productbiografie, ga ik per week door het project heen. Ik zal elke week een korte beschrijving geven van wat we hebben gedaan. Met daarbij de verschillende schetsen, itteraties en uitwerkingen. Aan deze onderdelen zijn features verbonden die ik naast een aantal leerdoelen zal leggen. Per feature/leerdoel zal ik kijken welke rubric erbij past en dit onderbouwen.
 
 ## Week I
-*27-5*
+**27-31 juli**
 
-- Briefing Project
-- Onderzoek huidige situatie en 
+In de eerste week hebben we een briefing gehad van onze opdrachtgever J. R. Helmus. Hierin werd ons uitgelegd wat voor applicatie er nodig was en welke stakeholders er bij dit project betrokken waren. Aan het einde van de briefing ben ik met Robin Hofman samen gaan werken.
+
+### Concepting
+Robin en ik waren het al vrij snel eens over hoe de applicatie zou moeten gaan werken. Hier hebben we een aantal simpele wireframes over gemaakt. Te zien hieronder.
+
+![]()
+
+### Developer Stack
+Nadat we een paar schetsen hebben gemaakt zijn we bezig gegaan met het bedenken welke developerstack 
+
+### Eerste Prototype
 
 - opdracht
 - onze oplossing
@@ -30,10 +44,15 @@ In dit document, de productbiografie, ga ik per week door het project heen. Ik z
 - uitleg per rubric
 
 ## Week II
+**3-8 juni**
 ste functionaliteiten rond en kwam de focus op het samenvoegen van de verschillende delen van de applicatie.
 
+## Week III
+**10-14 juni**
+## Week IV
+**17-21 juni**
 ## Week V
-*24-06*
+**24-06**
 # Meesterproef 2019 @cmda-minor-web · 2018-2019
 
 In de Meesterproef ga je toepassen wat je in de Minor Webdev hebt geleerd. 
