@@ -9,9 +9,10 @@
   - [Developer Stack](#developer-stack)
   - [Eerste Prototype](#eerste-prototype)
 - [Week II](#week-ii)
+  - [Datamodel](#datamodel)
   - [Tweede Prototype](#tweede-prototype)
-  - [Concepting](#concepting)
 - [Week III](#week-iii)
+  - [Datamodel](#datamodel)
 - [Week IV](#week-iv)
 - [Week V](#week-v)
 - [Leerdoelen](#leerdoelen)
@@ -73,19 +74,64 @@ Wanneer een melding is gelukt krijgt de gebruiker een nieuwe, wel beschikbare, l
 ## Week II
 **3-8 juni**
 
-In week twee hebben we ons eerste 
+In week twee hebben we in het eerste feedbackgesprek ons prototype laten zien aan de opdrachtgever. Hij was over het algemeen erg tevereden. De kleurkeuze was hij het alleen helemaal niet mee eens. We hebben voor een andere, meer groene, kleur gekozen. Ik ben daarna verder gegaan met het bouwen van de verschillende pagina's. Tot nu toe enkel statisch. Robin was tegelijk bezig met het opzetten van de database en de server. Zodat we het aan het einde van de week front end en back end aan elkaar konden knopen.
+
+### Datamodel
+Om de database op te zetten hadden we een datamodel nodig. Het is belangrijk om hier goed over na te denken voordat je de rest van de applicatie gaat maken. Anders krijg je later veel dubbel werk. Ons datamodel, tot nu toe, zag er zo uit:
+
+```USERS
+  ID: unique ID
+  email
+  name
+  number
+  points (?)
+
+POLES
+  ID: laadpaal ID
+  longitude
+  latitude
+
+COMPLAINTS
+  ID: complaint ID
+  user: user ID
+  pole: pole id
+  type
+  description
+  image
+  status
+  date
+```
 
 ### Tweede Prototype
-Het eerste prototype dat we gemaakt hebben is in [Adobe XD](https://www.adobe.com/products/xd.html) gemaakt. Hiervan hebben we een klikbaar prototype gepresenteerd aan de opdrachtgever in week twee. Hieronder een aantal schermen en wat ze doen.
+Het tweede prototype dat we gemaakt hebben was nog zonder een werkende kaart zoals we wel wilde. Maar was vooral om even te kijken bij de opdrachtgever hoe hij het invullen van een melding vond gaan. Dit hebben we in week 3 getest. Hieronder een paar van de belangrijkste schermen die we hebben getset.
 
-![wireframes](afbeeldingen-biografie/ChoosePole.png)
-![wireframes](afbeeldingen-biografie/ChooseComplaint.png)
-![wireframes](afbeeldingen-biografie/ChooseTypeofComplaint.png)
-![wireframes](afbeeldingen-biografie/Succes.png)
+Een redesign van de vorige week en nu, omdat het gecodeerd is, met animaties.
+![wireframes](afbeeldingen-biografie/choosePole-2.PNG)
 
+Een redesign van de vorige week en nu, omdat het gecodeerd is, met animaties.
+![wireframes](afbeeldingen-biografie/choosePolesss.PNG)
 
 ## Week III
 **10-14 juni**
+
+Het tweede feedbackgesprek met de opdrachtgever vond in week 3 plaats. Hierbij hebben we laten zien hoe de applicatie in zijn werking zal gaan. Ook hebben we een aantal vragen gesteld over welke data hij graag terug zou zien in de database. Over het algemeen was hij zeer tevreden, hij vond het geweldig dat er al een soort prototype werkend was. En dit zonder dat er een werkende kaart in applicatie zat, en zonder dat er echte data van palen beschikbaar was.Na het gesprek zijn we vooral bezig geweest met het implementeren van [MapBox](https://www.mapbox.com/?utm_medium=sem&utm_source=google&utm_campaign=sem|google|brand|chko-googlesearch-pr01-mapboxbrand-br.exact-intl-landingpage-search&utm_term=brand&utm_content=chko-googlesearch-pr01-mapboxbrand-br.exact-intl-landingpage-search&gclid=CjwKCAjwr8zoBRA0EiwANmvpYOA-At5_R2NJ1xRzM_QY9aGmr1TshuPxWZqSEfE_n3As4ckJtOFIUBoCvNgQAvD_BwE) en het beschikbaar maken van de data van de laadpalen. Die data heeft J. R. Helmus ons aan het begin van de week aangeleverd.
+
+### Datamodel
+
+Omdat er een hele hoop nieuwe data in de database moest hebben we ook nog even goed gekeken naar het datamodel. 
+
+![Datamodel](afbeeldingen-biografie/datamodel.jpeg)
+
+### Mapbox
+
+Voor 12/06/2019:
+- MapBox implementeren
+- Palen op MapBox weergeven
+- On click -> navigeren of klacht
+- Footer/fixed buttons onderaan pagina
+- Successpagina fixen
+- PowerPoint maken
+
 ## Week IV
 **17-21 juni**
 ## Week V
