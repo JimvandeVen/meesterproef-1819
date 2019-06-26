@@ -154,7 +154,7 @@ Hieronder de code 'before' en 'after'.
 
 <details>
 <summary>Before</summary>
-<p>
+
 ``` js       
         var pointer = {
           type: "FeatureCollection",
@@ -172,7 +172,7 @@ Hieronder de code 'before' en 'after'.
           ]
         };
 ```
-</p>
+
 </details>
 <details>
 <summary>After</summary>
