@@ -203,8 +203,78 @@ function onConnect(socket){
 
 ## Coupling with an API
 
+Now we are done with the easy part of socket.io I will explain something a bit more difficult. Coupling your socket.io with a `stream` and getting live data from the twitter API. During a small project I was working I used this method to get the latest tweets and send them to different rooms via socket.io.
+
+First thing first. Connecting with the twitter API. I will not go deeply into the how to get the twitter API connected because that could be a whole new article on its own. [Here](https://developer.twitter.com/en/docs/basics/getting-started) you can find all the things you need to know about connecting to the twitter API. What I also used was a npm package called [twit](https://www.npmjs.com/package/twit)
+
+In the end my serevr looced like this:
+
+```js
+const express = require('express');
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+const Twit = require('twit')
+const Sentiment = require('sentiment');
+const sentiment = new Sentiment();
+require('dotenv').config()
+
+var T = new Twit({
+    consumer_key: process.env.consumer_key,
+    consumer_secret: process.env.consumer_secret,
+    access_token: process.env.access_token,
+    access_token_secret: process.env.access_token_secret
+})
+
+app.set("views", "view");
+app.set("view engine", "ejs");
+
+app.use(express.static('public'))
+
+app.get('/', index)
+
+
+function index(req, res) {
+    res.render("pages/index");
+};
+
+let proTweets = []
+let conTweets = []
+
+let stream = T.stream('statuses/filter', { track: '#brexit', language: 'en', tweet_mode: "extended" })
+
+stream.on('tweet', function (stream) {
+    streamHandler(stream)
+})
+
+```
+
+You can see that through the twit package I was able to create a stream with the twitter API by using `let stream = T.stream('statuses/filter', { track: '#brexit', language: 'en', tweet_mode: "extended" })`. Then using socket like syntax you can call `stream.on`. This means everytime a new tweet gets sent, that includes the thing you `track`, something will happen. In this case `streamHandler(stream)` gets called.
+
+In the `streamHandler` function i call `io.to('proBrexit').emit('autoFeed', tweet);`. This means the tweet gets sent to the `proBrexit` room. The only thing you have to do then is to create a listner in the client js that does something when `autoFeed` gets emited. Like so:
+
+```js
+
+socket.on("autoFeed", function (tweet) {
+    document.querySelector(".feed").innerHTML +=
+        `<div class="tweet">
+            <h3>${tweet.author}</h3>
+            <img class="avatar" src="${tweet.avatar}"></img>
+            <p>${tweet.body}</p>
+        </div>`
+})
+```
+Now everytime there is a new tweet it gets added to the feed element. 
+
 ## What we have learned
 
-## Sources
+I hope that by reading this article you have some understanding of what socket.io is and what it can do. How to set up a simple chat application for browsers. How different namespaces and rooms can give an extra layer to a chat application and how to implement them. I also hope that you understand that you can do more things with socket.io than only a chat application. And that my example of the twitter/socket.io makes you think of all the awesome things that lay in wait when you start to use socket.io.
 
-https://socket.io/docs/
+Some parts may look complicated but if you start small and go step by step I think you can achieve more than you think. Now start coding!
+
+
+
+## Sources
+[SOcket.io](https://socket.io/docs/)
+[Twitter API](https://developer.twitter.com/en/docs/basics/getting-started)
+[NPM Twit](https://www.npmjs.com/package/twit)
