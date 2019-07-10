@@ -17,7 +17,7 @@ A couple of weeks ago I worked with socket.io for the first time. Socket.io lets
 
 ## What is socket
 
-Socket.IO is a library that enables real-time, two-way communication between the browser and the server. This works much in the way of eventlistners in Javascript. The two communicating parties are a Node.js server and a Javascript client library. 
+Socket.IO is a library that enables real-time, two-way communication between the browser and the server. This works much in the way of event listeners in Javascript. The two communicating parties are a Node.js server and a Javascript client library. 
 
 Each client that connects to the server will get a socket. This unique socket then can communicate with the other sockets through the server. I will explain how this works later on.
 
@@ -65,7 +65,7 @@ HTML:
 </html>
 ```
 
-Now that we have a srever and a html page that has a form in it we want to create a connection between the client and the server. For this we create a client.js file that contains:
+Now that we have a server and a html page that has a form in it we want to create a connection between the client and the server. For this we create a client.js file that contains:
 
 ```js
 const form = document.querySelector('.message');
@@ -81,7 +81,7 @@ form.addEventListener("submit", function(e) {
 });
 ```
 
-With the `socket.emit`, that works much like an event handler you can 'emit' an event and send data to the server. In this case we send the value of the input field. The 'eventlistener' on the server looks like this:
+With the `socket.emit`, that works much like an event handler you can 'emit' an event and send data to the server. In this case we send the value of the input field. The 'event listener' on the server looks like this:
 
 ```js
 io.on('connection', function(socket) {
@@ -99,7 +99,7 @@ socket.on('chat message', function(msg){
 });
 ```
 
-And here you have it! The most simple, but still awesome, version of a chat. That wasn't so hard I think so lets take it up a notch.
+And here you have it! The most simple, but still awesome, version of a chat. That wasn't so hard I think so let’s take it up a notch.
 
 ## Rooms and Namespaces
 
@@ -121,7 +121,7 @@ On the client side you tell the socket to connect to that namespace like so:
 const socket = io('/my-namespace');
 ```
 
-Within each namespace you can also let the sockets `join` or `leave` rooms. This especially usefull when you want to create different channels to which the client can subscribe. Think about different channels in slack, or different group chats in whatsapp.
+Within each namespace you can also let the sockets `join` or `leave` rooms. This especially useful when you want to create different channels to which the client can subscribe. Think about different channels in slack, or different group chats in WhatsApp.
 
 Rooms are, agin, really easy to implement. In the client side you can send an emit like so:
 
@@ -145,7 +145,7 @@ io.to('some room').emit('some event');
 
 ## Different emits
 
-Below are all the different types of emits you can use to get the 'messages' to the clients you want. As you can see there are quiete alot. But they are not overly complicated.
+Below are all the different types of emits you can use to get the 'messages' to the clients you want. As you can see there are quite a lot. But they are not overly complicated.
 
 ```js
 io.on('connect', onConnect);
@@ -207,7 +207,7 @@ Now we are done with the easy part of socket.io I will explain something a bit m
 
 First thing first. Connecting with the twitter API. I will not go deeply into the how to get the twitter API connected because that could be a whole new article on its own. [Here](https://developer.twitter.com/en/docs/basics/getting-started) you can find all the things you need to know about connecting to the twitter API. What I also used was a npm package called [twit](https://www.npmjs.com/package/twit)
 
-In the end my serevr looced like this:
+In the end my server looked like this:
 
 ```js
 const express = require('express');
@@ -249,9 +249,9 @@ stream.on('tweet', function (stream) {
 
 ```
 
-You can see that through the twit package I was able to create a stream with the twitter API by using `let stream = T.stream('statuses/filter', { track: '#brexit', language: 'en', tweet_mode: "extended" })`. Then using socket like syntax you can call `stream.on`. This means everytime a new tweet gets sent, that includes the thing you `track`, something will happen. In this case `streamHandler(stream)` gets called.
+You can see that through the twit package I was able to create a stream with the twitter API by using `let stream = T.stream('statuses/filter', { track: '#brexit', language: 'en', tweet_mode: "extended" })`. Then using socket like syntax you can call `stream.on`. This means every time a new tweet gets sent, that includes the thing you `track`, something will happen. In this case `streamHandler(stream)` gets called.
 
-In the `streamHandler` function i call `io.to('proBrexit').emit('autoFeed', tweet);`. This means the tweet gets sent to the `proBrexit` room. The only thing you have to do then is to create a listner in the client js that does something when `autoFeed` gets emited. Like so:
+In the `streamHandler` function i call `io.to('proBrexit').emit('autoFeed', tweet);`. This means the tweet gets sent to the `proBrexit` room. The only thing you have to do then is to create a listener in the client js that does something when `autoFeed` gets emitted. Like so:
 
 ```js
 
@@ -264,7 +264,7 @@ socket.on("autoFeed", function (tweet) {
         </div>`
 })
 ```
-Now everytime there is a new tweet it gets added to the feed element. 
+Now every time there is a new tweet it gets added to the feed element. 
 
 ## What we have learned
 
