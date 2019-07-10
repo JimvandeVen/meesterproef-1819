@@ -275,6 +275,6 @@ Some parts may look complicated but if you start small and go step by step I thi
 
 
 ## Sources
-[SOcket.io](https://socket.io/docs/)
-[Twitter API](https://developer.twitter.com/en/docs/basics/getting-started)
-[NPM Twit](https://www.npmjs.com/package/twit)
+[SOcket.io](https://socket.io/docs/)  
+[Twitter API](https://developer.twitter.com/en/docs/basics/getting-started)  
+[NPM Twit](https://www.npmjs.com/package/twit)  
